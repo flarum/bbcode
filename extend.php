@@ -27,4 +27,5 @@ return (new Extend\Formatter)
         $config->BBCodes->addFromRepository('CENTER');
         $config->BBCodes->addFromRepository('SIZE');
         $config->BBCodes->addFromRepository('*');
+        $config->tags['list']->template = str_replace('or', '+', $config->tags['list']->template);
     });
