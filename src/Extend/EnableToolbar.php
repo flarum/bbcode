@@ -26,7 +26,7 @@ class EnableToolbar implements ExtenderInterface
         // Proxy the request through the extender for forward compatibility.
         if (! $extensions->isEnabled('flarum-markdown')) {
             (new Frontend('forum'))
-                ->js(__DIR__ . '/../../js/dist/forum.js')
+                ->js(__DIR__.'/../../js/dist/forum.js')
                 ->extend($container, $extension);
         }
     }
