@@ -12,7 +12,7 @@ export default class Toolbar extends Component {
   }
 
   view() {
-    return <div id="MarkdownToolbar" data-for={this.props.for} style={{ display: 'inline-block' }}>
+    return <div id="Toolbar" data-for={this.props.for} style={{ display: 'inline-block' }}>
       {this.props.children}
     </div>;
   }
