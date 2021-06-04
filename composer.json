@@ -19,6 +19,11 @@
     "require": {
         "flarum/core": "^1.0"
     },
+    "autoload": {
+      "psr-4": {
+        "Flarum\\Bbcode\\": "src/"
+      }
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"

@@ -7,10 +7,13 @@
  * LICENSE file that was distributed with this source code.
  */
 
+use Flarum\Bbcode\Extend\EnableToolbar;
 use Flarum\Extend;
 use s9e\TextFormatter\Configurator;
 
-return (new Extend\Formatter)
+return [
+    new EnableToolbar(),
+    (new Extend\Formatter)
     ->configure(function (Configurator $config) {
         $config->BBCodes->addFromRepository('B');
         $config->BBCodes->addFromRepository('I');
@@ -27,4 +30,5 @@ return (new Extend\Formatter)
         $config->BBCodes->addFromRepository('CENTER');
         $config->BBCodes->addFromRepository('SIZE');
         $config->BBCodes->addFromRepository('*');
-    });
+    })
+];
